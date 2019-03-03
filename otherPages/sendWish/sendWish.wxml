@@ -1,0 +1,32 @@
+<!--pages/sendWish/sendWish.wxml-->
+<view class="container">
+  <image class='userBgtop' src='../../image/topBg.png' hidden="{{isShare}}"></image>
+
+  <view class='select'>
+    
+    <text class="textColor">选择祝福语(可选一个)</text>
+
+    <radio-group  class='radio-group' bindchange="wishChange">
+      <label class="radio" wx:for="{{wishItems}}">
+        <radio value="{{item.name}}" color='#FFA800' checked="{{item.checked}}" />
+        {{item.value}}
+      </label>
+    </radio-group>
+  </view>
+
+   <view class='select2'>
+    <text class="textColor">我们多久没见面了？</text>
+
+    <radio-group  class='radio-group' bindchange="lastChange">
+      <label class="radio" wx:for="{{lastItems}}">
+        <radio value="{{item.name}}" color='#FFA800' checked="{{item.checked}}" />
+        {{item.value}}
+      </label>
+    </radio-group>
+  </view>
+
+  <view style='width:100%;height:20%'>
+    <image class='userBgBottom' src='../../image/mainBottomBg.png' hidden="{{isShare}}"></image>
+     <button class="button"  bindtap="sendWish">确定</button>
+  </view>
+</view>

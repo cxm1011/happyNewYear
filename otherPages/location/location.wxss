@@ -1,0 +1,162 @@
+/* pages/location/loaction.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  /* background-image: url('../../image/locationBg.png') no-repeat;
+   background-size: cover; */
+  /* background-color: #04284e; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ec-canvas {
+  width: 100%;
+  height: 50%;
+  /* margin-top: 5%; */
+}
+
+.textColor {
+  color: white;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.textBlack {
+  margin-top: 30rpx;
+  color: #333333;
+   text-align: center;
+}
+
+.userInfoColor {
+  color: #FFA800;
+}
+
+.radio-group {
+  display:flex;
+  justify-content:space-around;
+ 
+}
+
+
+.radio-group .radio {
+    border: 1px solid #FFA800;
+    background:#fff;
+    border-radius: 2px;
+    padding:3px 12px;
+    text-align:center;
+    margin-right:3px;
+    color:#FFA800;
+    background-image: url('https://dasense.cn/image/topBtnBg.jpg');
+     background-size: 100% auto;
+}
+
+.radio-group .radio.active {
+    border: 1px solid #C31515;
+    background-image: url('https://dasense.cn/image/topBtnBgRed.png');
+    background-size: 100% auto;
+    color:#FFF;
+   
+    
+}
+
+.largeShow {
+  margin-right: 50rpx;
+}
+
+
+.button {
+  color:white;
+  background-color: #C31515;
+  font-size: 30rpx;
+  /* background-color:#7EC0EE; */
+  /* height: 15rpx; */
+  /* margin-left: 20px; */
+}
+
+.saveButton {
+  margin-top: 40rpx;
+  color:white;
+  background-color: #C31515;
+  width: 80%;
+  /* background-color:#7EC0EE; */
+  /* height: 15rpx; */
+  /* margin-left: 20px; */
+}
+
+.buttonGroup {
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  /* margin-top: 35rpx; */
+  position: absolute;
+
+}
+
+.share-image {
+  width: 600rpx;
+  height: 888rpx;
+  margin: 0 75rpx;
+  border: 1px solid #000;
+  margin-top: 50rpx;
+  background-color:#fff;
+}
+
+
+/* 弹幕*/
+.aon{
+  position: absolute;
+  white-space:nowrap;/* 防止向下换行*/
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+}
+.doommview{
+  z-index: 3;
+  height: 20%;
+  width: 100%;
+  position: absolute;
+}
+
+@keyframes first{
+  from{left: 100%; }
+  to{left: -100%;}
+}
+
+.userBg{
+width: 100%;
+height: 20%;
+position: absolute;
+  top: 0;
+}
+
+.userBgBottom {
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+}
+
+.userContent{
+    position: absolute; 
+    z-index: 4;
+    width: 100%;
+ /* background-size:cover; */
+}
+
+.avatarImg {
+  position: absolute; 
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
+  overflow:hidden;
+  background-color: #eeeeee;
+  margin-left: 5rpx;
+
+}
+
+.doomText {
+  margin-left: 65rpx;
+  margin-right: 10rpx;
+}

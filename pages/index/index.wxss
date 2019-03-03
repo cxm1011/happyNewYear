@@ -1,0 +1,56 @@
+/**index.wxss**/
+page {
+  height: 100%
+}
+.container {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.textColor {
+  color: #333333;
+  text-align: center;
+  margin-top: 130rpx;
+}
+
+.button {
+  color:white;
+  background-color:#C31515;
+  width: 80%;
+  margin-bottom: 100rpx;
+}
+
+.userBg{
+  width: 100%;
+  height: 100%;
+}
+
+.userContent{
+    position: absolute; 
+    z-index: 4;
+    top: 80rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.userContent1{
+  position: absolute; 
+  z-index: 4;
+  top: 135rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.textColor1 {
+  color: #333333;
+  text-align: center;
+  margin-top: 130rpx;
+}
+
+.userBgBottom {
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+}

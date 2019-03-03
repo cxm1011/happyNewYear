@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view style='height: 20%;width: 100%;'>
+    <image class='userBg' src='../../image/topBg.png' hidden="{{isShare}}"></image>
+
+    <view  class='userContent'>
+      <text class="textColor">{{title1}}</text>
+    </view>
+    <view  class='userContent1'>
+      <text class="textColor1">{{title2}}</text>
+    </view>
+   </view>
+
+  <view style='height:60%;width:100%'>
+    <image style='height:70%;width:100%' src='../../image/indexGif.gif'></image>
+  </view>
+
+  <view style='height:35%;width:100%'>
+    <image class='userBgBottom' src='../../image/mainBottomBg.png' hidden="{{isShare}}"></image>
+    <button class="button" open-type="getUserInfo"  bindgetuserinfo="onGetUserInfo">开始</button>
+  </view>
+  <!-- <button open-type="openSetting">打开授权设置页</button> -->
+</view>

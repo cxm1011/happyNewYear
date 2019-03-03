@@ -1,0 +1,139 @@
+<!--index.wxml-->
+<view class="container">
+<!-- <view style='height: 25%;width: 100%;'> -->
+    <!-- 弹幕-->
+    <view class="doommview" hidden="{{isShare}}">
+        <block wx:for="{{doommData}}" wx:key="id">
+            <view wx:if="{{item.display}}" class="aon" style="animation: first {{item.time}}s linear forwards;top:{{item.top}}%;color:{{item.color}}; border: 1px solid #c1c1c1;border-radius:30rpx; background-color: #c1c1c1">
+                <image style="color:#fff;font-size:30rpx;text-align:center; {{item.avatarUrl?';':'opacity:0'}}" class="avatarImg" src="{{item.avatarUrl}}" mode='aspectFit'></image>
+                <text class='doomText'>{{item.text}}</text>
+            </view>
+        </block>
+    </view>
+
+ <view style='height: 25%;width: 100%;'>
+    <image class='userBg' src='../../image/topBg.png' hidden="{{isShare}}"></image>
+
+    <view  class='userContent'  style="{{isShare === true ?'opacity:0;': ''}}">
+      <view class="textBlack" style="{{showWishButton?'':'opacity:0;'}}" hidden="{{isShare }}">
+        <text class="userInfoColor">{{nickName}}</text>的好友在
+        <text class="userInfoColor">{{cityNumber}}</text>个城市过年,收到
+        <text class="userInfoColor">{{wishNumber}}</text>个猪福
+      </view>
+
+      <view style="{{showWishButton?'':'opacity:0;'}} color: #333;text-align: center;margin-bottom: 20rpx; " hidden="{{isShare}}">
+        <text>猪猪魅力值</text>
+        <text class="userInfoColor">{{charmValue}}</text>
+      </view>
+
+      <view class='mapSelect'>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio {{item.checked?'active':''}}" wx:for="{{items}}" wx:key="id" >
+            <radio value="{{item.name}}" checked="{{item.checked}}" style="display:none;"/>
+            {{item.value}}
+          </label>
+        </radio-group>
+      </view>
+   </view>
+</view>
+  
+    <!-- <view  class='userContent' hidden="{{isShare}}">
+      <view class="textBlack" style="{{showWishButton?'':'opacity:0;'}}" hidden="{{isShare }}">
+        <text class="userInfoColor">{{nickName}}</text>的好友在
+        <text class="userInfoColor">{{cityNumber}}</text>个城市过年,收到
+        <text class="userInfoColor">{{wishNumber}}</text>个猪福
+      </view>
+
+      <view style="{{showWishButton?'':'opacity:0;'}} color: #333;text-align: center;margin-bottom: 20rpx; " hidden="{{isShare}}">
+        <text>猪猪魅力值</text>
+        <text class="userInfoColor">{{charmValue}}</text>
+      </view>
+
+      <view class='mapSelect' hidden="{{isShare}}">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio {{item.checked?'active':''}}" wx:for="{{items}}" wx:key="id" >
+            <radio value="{{item.name}}" checked="{{item.checked}}" style="display:none;"/>
+            {{item.value}}
+          </label>
+        </radio-group>
+      </view>
+   </view> -->
+
+<!-- china  100至500放大 单层-->
+<ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'china' && inputValue == 100  && !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'china' && inputValue == 200  && !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'china' && inputValue == 300 && !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'china' && inputValue == 400  && !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'china' && inputValue == 500 && !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+
+<!-- world  100至500放大-->
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'world' && inputValue == 100 &&  !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'world' && inputValue == 200 && !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}" ></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'world' && inputValue == 300 &&  !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}" ></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'world' && inputValue == 400 &&  !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}" ></ec-canvas>
+
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'world' && inputValue == 500 &&  !isShare && !isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}" ></ec-canvas>
+
+
+    <!-- china  100放大 双层带阴影-->
+<ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'china' && inputValue == 100  && !isShare && isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+
+<!-- world  100放大 双层带阴影-->
+    <ec-canvas id="mychart-dom-area1" wx:if="{{mapName == 'world' && inputValue == 100 &&  !isShare && isShareClick}}"  canvas-id="mychart-area" mapName="{{mapName}}" inputValue="{{inputValue}}" ec="{{ ec }}" geoCoordMap="{{geoCoordMap}}" BJData="{{BJData}}" 
+    wishDetail="{{wishDetail}}" myLocation="{{myLocation}}" isShareClick="{{isShareClick}}"></ec-canvas>
+   
+
+    <!--分享图 -->
+     <view wx:if="{{!!isShare}}">
+        <image src="{{shareImage}}" class="share-image"></image>
+        <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+        <button class="saveButton" bindtap='saveToAblum'>保存到相册</button>
+      </view>
+
+    <view style='height: 25%;width: 100%;'>
+      <image class='userBgBottom' src='../../image/mainBottomBg.png' hidden="{{isShare}}"></image>
+       <view class="section section_gap" style='width: 80%;margin-left:10%' hidden="{{isShare}}">
+              <view class="body-view">
+                  <slider backgroundColor='#EDDFDE' activeColor='#C31515' block-color='#C31515' bindchange="slider2change" block-size='16' min="100" max="500" step="100"/>
+              </view>
+      </view>
+      <view  class='userContent' hidden="{{isShare}}">
+        <!-- <view style="color:#fff;font-size:30rpx;text-align:center; {{isExceedTime?'opacity:0;':''}}" hidden="{{isShare}}">
+          <text class="textBlack">更多好友报告，关注公众号</text>
+          <text class="userInfoColor">嘻乐生活圈</text>
+        </view> -->
+
+        <view class="buttonGroup" hidden="{{isShare}}" wx:if="{{scene === 'undefined'}}">
+          <button class="button" open-type="share">邀请</button>
+          <button class="button" hidden='{{!showWishButton}}' bindtap='showWishButton'>查看猪福</button>
+          <button class="button" hidden='{{showWishButton}}' bindtap='hiddenWishButton'>隐藏猪福</button>
+          <!-- <button class="button" bindtap='sharePhoto'>分享</button> -->
+          <button class="button" bindtap='sharePhoto'>绘图</button>
+        </view>
+
+        <view class="buttonGroup" hidden="{{isShare}}" wx:if="{{scene !== 'undefined'}}">
+          <button class="button" bindtap='toIndexPage'>我也要玩</button>
+          <button class="button" bindtap='toSendWishPage' hidden="{{isShowPlayButton}}">送猪福</button>
+        </view>
+      </view>
+    </view>
+</view>
+

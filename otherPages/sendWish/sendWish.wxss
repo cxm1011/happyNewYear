@@ -1,0 +1,60 @@
+/* pages/sendWish/sendWish.wxss */
+page {
+  height: 100%
+}
+.container {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.select {
+  margin: 30rpx 100rpx 0 100rpx;
+  z-index: 2;
+}
+
+.select2 {
+  margin: 0 100rpx;
+  z-index: 2;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap:wrap;
+}
+
+.radio {
+  margin-right: 20rpx;
+  color: #333;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.textColor {
+  color: #333;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.button {
+  color:white;
+  background-color:#C31515;
+  width: 80%;
+  margin-bottom: 50rpx;
+}
+
+
+.userBgtop {
+  width: 100%;
+  height: 18%;
+  position: absolute;
+}
+
+.userBgBottom {
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+}
